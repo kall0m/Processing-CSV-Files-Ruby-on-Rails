@@ -10,7 +10,7 @@ class LinRegressionsController < ApplicationController
 
     CSV.foreach(file.path) do |row|
       x.push($INPUT_LINE_NUMBER)
-      y.push(row[1].to_f)
+      y.push(row[0].to_f)
     end
 
     lineFit = LineFit.new
